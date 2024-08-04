@@ -28,11 +28,15 @@ water_tile = pygame.transform.scale(water_tile, (TILE_SIZE, TILE_SIZE))
 
 # Create a simple tile map
 tile_map = [
-    ['grass', 'grass', 'grass', 'water', 'water'],
-    ['grass', 'grass', 'grass', 'water', 'water'],
-    ['grass', 'grass', 'grass', 'grass', 'grass'],
-    ['grass', 'grass', 'grass', 'grass', 'grass'],
-    ['water', 'water', 'grass', 'grass', 'grass']
+    ['grass', 'grass', 'grass', 'water', 'water', 'water', 'water', 'water'],
+    ['grass', 'grass', 'grass', 'water', 'water', 'water', 'water', 'water'],
+    ['grass', 'grass', 'grass', 'grass', 'grass', 'water', 'water', 'water'],
+    ['grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'water'],
+    ['water', 'water', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass'],
+    ['water', 'water', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass'],
+    ['water', 'water', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass'],
+    ['water', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass'],
+    ['grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass']
 ]
 
 # Player settings
