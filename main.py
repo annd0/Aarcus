@@ -1,5 +1,6 @@
 import pygame
 import sys
+import os
 
 # Initialize Pygame
 pygame.init()
@@ -16,11 +17,15 @@ GREEN = (0, 255, 0)
 
 # Set up the screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("80s RPG Style Game")
+pygame.display.set_caption("RPG Style Game")
+
+# Function to load an image from a given path
+def load_image(path):
+    return pygame.image.load(path)
 
 # Load tile images
-grass_tile = pygame.image.load('Cartoon_green_texture_grass.jpg')
-water_tile = pygame.image.load('OR6IKU0.jpg')
+grass_tile = load_image(os.path.join('images', 'tiles', 'grass.jpg'))
+water_tile = load_image(os.path.join('images', 'tiles', 'water.jpg'))
 
 # Adjust size of background tiles
 grass_tile = pygame.transform.scale(grass_tile, (TILE_SIZE, TILE_SIZE))
@@ -40,7 +45,7 @@ tile_map = [
 ]
 
 # Player settings
-player_image = pygame.image.load('player.png')
+player_image = load_image(os.path.join('images', 'player', 'player.png'))
 player_image = pygame.transform.scale(player_image, (TILE_SIZE, TILE_SIZE))
 player_pos = [1, 1]
 
